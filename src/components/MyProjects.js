@@ -14,7 +14,7 @@ function MyProjects() {
         <div className="myproj-card">
           <h3>NFTRehaul | NFT Website Re-imagined</h3>
           <p>For this project, I reimagined an NFT marketplace with a sophisticated dark-themed interface featuring rich purple accents. The design showcases a prominent hero section featuring the "Glamour Rare Collection," complemented by an organized grid gallery for browsing NFT collections. Key elements include trending "Hot Collections," detailed NFT cards with pricing information, integrated creator profiles, and marketplace statistics. I implemented a clean navigation system with search functionality and strategically placed call-to-action buttons to guide users through the purchasing process. The responsive layout ensures consistency across devices, while the immersive color palette creates visual contrast that emphasizes the vibrant NFT artwork while maintaining excellent readability.</p>
-          <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" className="view-project-btn">View in Figma</a>
+          <a href="https://www.figma.com/design/vmGdXJnX4zCXJ7GTiVkQ3e/NFTWebsite?node-id=3-45&p=f&t=QFpezfgjPM8WMxHX-0" target="_blank" rel="noopener noreferrer" className="view-project-btn">View in Figma</a>
         </div>
       </div>
     </section>
