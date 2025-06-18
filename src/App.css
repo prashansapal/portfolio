@@ -30,7 +30,7 @@ h1, h2, h3, .logo {
 }
 
 .navbar {
-  background-color: rgba(232, 220, 209, 0.95);
+  background-color: var(--secondary-bg);
   padding: 1rem;
   position: fixed;
   width: 100%;
