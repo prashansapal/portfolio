@@ -108,6 +108,51 @@ section {
   .nav-links li {
     margin: 0.5rem 0;
   }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    margin: 0;
+  }
+
+  .skills h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .contact-content {
+    padding: 0 1rem;
+  }
 }
 
 .App-link {
@@ -260,13 +305,13 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
-  margin: 2rem;
+  margin: 1rem auto;
   justify-content: center;
   align-items: stretch;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -299,6 +344,10 @@ section {
 
 .project-tech {
   margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
 .project-tech span {
@@ -306,8 +355,9 @@ section {
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
-  margin-right: 0.5rem;
+  margin: 0.25rem;
   font-size: 0.9rem;
+  display: inline-block;
 }
 
 .project-links {
@@ -392,6 +442,7 @@ section {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .form-group {
@@ -401,14 +452,16 @@ section {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 1px solid var(--accent-color-1);
   border-radius: 4px;
   background: var(--primary-bg);
   color: var(--text-primary);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -427,16 +480,18 @@ section {
 
 .submit-btn {
   width: 100%;
+  max-width: 300px;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   background-color: var(--accent-color-1);
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Cormorant Garamond', serif;
+  margin: 1rem 0;
 }
 
 .submit-btn:hover {
@@ -445,6 +500,20 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-form {
+    padding: 0;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on mobile devices */
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
