@@ -110,27 +110,40 @@ section {
 /* Mobile Navigation Toggle Button */
 .nav-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 1001;
-  position: relative;
 }
 
-.nav-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--text-primary);
-  transition: all 0.3s ease;
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
 }
 
 @media (max-width: 768px) {
   .nav-backdrop.nav-active {
     display: block;
     opacity: 1;
+  }
+
+  .nav-toggle {
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+    margin-left: 0;
   }
 
   .navbar {
@@ -147,10 +160,7 @@ section {
 
   .nav-toggle {
     display: flex;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 1rem;
   }
 
   .nav-links {
