@@ -103,6 +103,8 @@ section {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* Mobile Navigation Toggle Button */
@@ -113,7 +115,8 @@ section {
   width: 30px;
   height: 21px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1001;
+  position: relative;
 }
 
 .nav-toggle span {
@@ -125,8 +128,9 @@ section {
 }
 
 @media (max-width: 768px) {
-  .nav-backdrop {
+  .nav-backdrop.nav-active {
     display: block;
+    opacity: 1;
   }
 
   .navbar {
@@ -137,10 +141,16 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
+    position: relative;
   }
 
   .nav-toggle {
     display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .nav-links {
@@ -156,6 +166,7 @@ section {
     transition: right 0.3s ease;
     padding: 2rem;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
 
   .nav-links.nav-active {
@@ -187,15 +198,16 @@ section {
   }
 
   .toggle-active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
+    transform: rotate(45deg) translate(6px, 6px);
   }
 
   .toggle-active span:nth-child(2) {
     opacity: 0;
+    transform: translateX(10px);
   }
 
   .toggle-active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
 

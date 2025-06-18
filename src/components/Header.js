@@ -9,9 +9,10 @@ function Header() {
 
   return (
     <nav className="navbar">
-      {isMenuOpen && <div className="nav-backdrop" onClick={toggleMenu}></div>}
+      <div className={`nav-backdrop ${isMenuOpen ? 'nav-active' : ''}`} onClick={toggleMenu}></div>
       <div className="nav-content">
         <div className="logo">Prashansa Pal</div>
+
         <ul className={`nav-links ${isMenuOpen ? 'nav-active' : ''}`}>
           <li><a href="#home" onClick={toggleMenu}>Home</a></li>
           <li><a href="#about" onClick={toggleMenu}>About</a></li>
