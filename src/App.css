@@ -30,30 +30,33 @@ h1, h2, h3, .logo {
 }
 
 .navbar {
-  background-color: rgba(232, 220, 209, 0.95);
-  padding: 1rem;
+  background-color: transparent;
+  padding: 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  padding: 0 2rem;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: 1px;
   transition: color 0.3s ease;
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
 }
 
 .logo:hover {
@@ -65,10 +68,11 @@ h1, h2, h3, .logo {
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 2rem;
 }
 
 .nav-links li {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .nav-links a {
@@ -76,12 +80,28 @@ h1, h2, h3, .logo {
   color: var(--text-primary);
   font-weight: 500;
   transition: color 0.3s ease;
-  font-size: 1.2rem;
-  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  color: var(--text-primary);
 }
 
 section {
@@ -458,8 +478,8 @@ section {
   flex-direction: column;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .project-card h3 {
