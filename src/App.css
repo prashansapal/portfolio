@@ -146,7 +146,7 @@ section {
     background-color: var(--text-primary);
     transition: all 0.3s ease;
   }
-}
+
 
 .nav-backdrop.nav-active {
   display: block;
@@ -199,7 +199,7 @@ section {
     left: 1.5rem;
     top: 1.5rem;
   }
-}
+
 
   .nav-links.nav-active {
     right: 0;

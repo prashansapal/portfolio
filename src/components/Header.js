@@ -15,7 +15,7 @@ function Header() {
 
         <ul className={`nav-links ${isMenuOpen ? 'nav-active' : ''}`}>
           <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-          <a href="#about" onClick={toggleMenu}>About</a>
+          <li><a href="#about" onClick={toggleMenu}>About</a></li>
           <li><a href="#work-experience" onClick={toggleMenu}>Work Experience</a></li>
           <li><a href="#myprojects" onClick={toggleMenu}>Projects</a></li>
           <li><a href="#skills" onClick={toggleMenu}>Skills</a></li>
