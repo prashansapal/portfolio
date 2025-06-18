@@ -441,7 +441,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   max-width: 1200px;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   justify-content: center;
   align-items: stretch;
   padding: 0 1rem;
@@ -457,6 +457,7 @@ section {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  margin: 1rem
 }
 
 .project-card h3 {
