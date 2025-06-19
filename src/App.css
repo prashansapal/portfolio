@@ -72,9 +72,10 @@ h1, h2, h3, .logo {
   margin: 0;
   padding: 0;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-direction: row;
   justify-content: flex-end;
+  margin-left: 2rem;
 }
 
 .nav-links li {
@@ -86,15 +87,31 @@ h1, h2, h3, .logo {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1.1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   white-space: nowrap;
   letter-spacing: 0.3px;
+  position: relative;
 }
 
 .nav-links a:hover {
   color: var(--accent-color-1);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color-1);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 section {
@@ -192,6 +209,16 @@ section {
     box-shadow: -2px 4px 4px rgba(0,0,0,0.1);
     z-index: 1000;
     gap: 2rem;
+    margin-left: 0;
+  }
+
+  .nav-links a {
+    padding: 0.5rem;
+  }
+
+  .nav-links a::after {
+    bottom: 0;
+    height: 1px;
   }
 
   .nav-links.nav-active {
