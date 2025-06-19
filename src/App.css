@@ -76,6 +76,11 @@ h1, h2, h3, .logo {
   flex-direction: row;
   justify-content: flex-end;
   margin-left: 2rem;
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  box-shadow: none;
 }
 
 .nav-links li {
@@ -145,13 +150,6 @@ section {
 /* Mobile Navigation Toggle Button */
 .nav-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  cursor: pointer;
-  z-index: 1001;
-  padding: 0;
 }
 
 .nav-toggle span {
@@ -185,6 +183,25 @@ section {
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -280px;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: var(--secondary-bg);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin-left: 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.nav-active {
+    right: 0;
+  }
+
   .nav-toggle {
     display: flex;
     position: absolute;
@@ -192,6 +209,13 @@ section {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
   }
 
   .nav-links {
