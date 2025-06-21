@@ -80,8 +80,8 @@ h1, h2, h3, .logo {
   position: relative;
   width: auto;
   height: 100%;
-  background: var(--secondary-bg);
-  box-shadow: none;
+  background: transparent;
+  transition: right 0.3s ease;
 }
 
 .nav-links li {
@@ -190,25 +190,6 @@ section {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    right: -280px;
-    width: 280px;
-    height: calc(100vh - 70px);
-    background: var(--secondary-bg);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem;
-    margin-left: 0;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
-  }
-
-  .nav-links.nav-active {
-    right: 0;
-  }
-
   .nav-toggle {
     display: flex;
     position: absolute;
@@ -223,6 +204,47 @@ section {
     cursor: pointer;
     z-index: 1001;
     padding: 0;
+  }
+
+  .nav-links {
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    right: -280px;
+    width: 280px;
+    background: var(--secondary-bg);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.nav-active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-links a {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a::after {
+    bottom: 0;
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
   }
 
   .nav-links {
@@ -243,17 +265,24 @@ section {
     margin-left: 0;
   }
 
+  .nav-links.nav-active {
+    right: 0;
+  }
+
   .nav-links a {
     padding: 0.5rem;
+    height: auto;
   }
 
   .nav-links a::after {
     bottom: 0;
-    height: 1px;
+    left: 0;
+    right: 0;
+    width: 0;
   }
 
-  .nav-links.nav-active {
-    right: 0;
+  .nav-links a:hover::after {
+    width: 100%;
   }
 }
 
