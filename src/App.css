@@ -50,6 +50,7 @@ h1, h2, h3, .logo {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  height: 100%;
 }
 
 .logo {
@@ -76,16 +77,18 @@ h1, h2, h3, .logo {
   flex-direction: row;
   justify-content: flex-end;
   margin-left: auto;
-  position: static;
+  position: relative;
   width: auto;
-  height: auto;
-  background: none;
+  height: 100%;
+  background: var(--secondary-bg);
   box-shadow: none;
 }
 
 .nav-links li {
   margin: 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-links a {
@@ -94,10 +97,13 @@ h1, h2, h3, .logo {
   font-weight: 500;
   transition: all 0.3s ease;
   font-size: 1.2rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   white-space: nowrap;
   letter-spacing: 0.5px;
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a:hover {
@@ -109,14 +115,15 @@ h1, h2, h3, .logo {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 0;
-  left: 0;
+  bottom: 1rem;
+  left: 0.5rem;
+  right: 0.5rem;
   background-color: var(--accent-color-1);
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  width: calc(100% - 1rem);
 }
 
 section {
